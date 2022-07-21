@@ -1,6 +1,17 @@
 *{
     margin: 0;
     padding: 0;
+
+}
+@font-face {
+    font-family: "oswald";
+    src: url(font/Oswald-Medium.ttf);
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    
 }
 
 #bk{
@@ -9,9 +20,98 @@
 }
 
 #logo{
-    width: 59px;
-    height: 59px;
+    width: 69px;
+    height: 69px;
     position: absolute;
     top: 10px;
     left : 10px
+}
+
+#title{
+    position: absolute;
+    
+    height: 35px;
+    left: 90px;
+    top: 24px;
+    font-family: 'oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 35px;
+    color: #000000;
+}
+
+#container{
+
+    width: 700px;
+    height: 320px;
+    background: #086E7D;
+    border-radius: 15px;
+    position: absolute;
+    top: 190px;
+    left: 350px;
+
+}
+
+#ref1{
+    width: 150px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+#ref1 > input{
+    width: 190px;
+    height: 39px;
+    margin-top: 10px;
+    margin-right: 60PX;
+    background-color: white;
+    border: 0px;
+    border-radius: 15px;
+}
+
+#ref1 > button{
+
+    width: 80px;
+    height: 29px;
+    background-color: white;
+    border: 0px;
+    border-radius: 15px;
+    position: absolute;
+    top: 240px;
+    left: 104px
+
+}
+
+
+#ref2{
+    position: absolute;
+    top: 30px;
+}
+
+#ref2 > input{
+    width: 190px;
+    height: 39px;
+    margin-top: 10px;
+    margin-left: 400PX;
+    background-color: white;
+    border: 0px;
+    border-radius: 15px;
+}
+
+#ref2 > button{
+
+    width: 80px;
+    height: 29px;
+    background-color: white;
+    border: 0px;
+    border-radius: 15px;
+    position: absolute;
+    top: 210px;
+    left: 460px;
+}
+
+#date2{
+    position: absolute;
+    top: 100px;
+    left: 0px;
 }

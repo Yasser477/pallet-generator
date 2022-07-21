@@ -30,16 +30,16 @@ session_start();
         <?php
           if ($_SESSION["nom"]){
           ?>
-           <a href="#"><span name="logout" class="fspans" style="position: absolute; left:1200px; top:38px; font-family:'oswald' ;"> <?php echo  $_SESSION["nom"];?> </span></a>  
+           <a href="#"><span name="logout" class="fspans" style="position: absolute; left:1200px; top:38px; font-family:'oswald' ; text-transform: uppercase; color :black"> user : <?php echo  $_SESSION["nom"];?> </span></a>  
             <?php
           }
           
-          if(isset(['submit'])){
+        //   if(isset(['submit'])){
 
-            session_destroy();
+        //     session_destroy();
             
-            header( 'location : authentication.php');
-          }
+        //     header( 'location : authentication.php');
+        //   }
           
             ?>
        
@@ -51,7 +51,7 @@ session_start();
 
         <img src="assets/pallet.png" id="pll">
         
-        <button class="button-two"><span>new pallet</span></button>
+       <a href="pallet.php"> <button class="button-two"><span>new pallet</span></button> </a>
 
         <button class="button-three"><span>old pallet</span></button>
 

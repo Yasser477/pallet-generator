@@ -25,16 +25,9 @@ session_start()
           ?>
            <a href="#"><span name="logout" class="fspans" style="position: absolute; left:1200px; top:38px; font-family:'oswald' ; text-transform: uppercase; color :black"> user : <?php echo  $_SESSION["nom"];?> </span></a>  
             <?php
-          }
-          
-        //   if(isset(['submit'])){
-
-        //     session_destroy();
-            
-        //     header( 'location : authentication.php');
-        //   }
-          
+          }          
             ?> </h4>
+
     </header>
 
     <main>
@@ -62,11 +55,43 @@ session_start()
     
             <div id="rightDiv">
 
-            <input type="text" placeholder="reference client 2" id="refe2">
-            <input type="datetime-local" placeholder="date 2" id="date2">
+            <form method="POST">
+
+            <input type="text" placeholder="reference client 2" id="refe2" name="reference_interne" >
+            <input type="datetime-local" placeholder="date 2" id="date2" name="date2">
             
-           <a href="secondPallet.php"> <button id="btn" > ajouter </button> </a>
+           <button id="btn" name="submit" > ajouter </button>
+         </form>
+
+         <?php
+                                        include"connection.php";
+                                if (isset($_POST['submit'])) {
+
+                                        //data  info
+                                        $reference_interne = $_POST['reference_interne'];
+                                        $date2  = $_POST['date2'];
+            
+
+                                            //data info >> database >> opérateur
+                                                $sql = "INSERT INTO machine (`reference_interne`,`date2`) VALUES ('$reference_interne','$date2')";
+                                                $query = mysqli_query($conn, $sql);
+
+                                                mysqli_close($conn);
+                                                die();
+
+                             }
+                        ?>
+
+
+
             </div>
+            
+            
+
+
+
+
+
 
         </div>
     </main>

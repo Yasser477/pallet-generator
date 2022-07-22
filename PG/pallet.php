@@ -74,6 +74,8 @@ session_start();
                 $sql = "INSERT INTO pallets (`ReferenceClient`,`ref_int`,`quantity`,`date`) VALUES ('$ReferenceClient','$ref_int','$quantity','$date')";
                 $query = mysqli_query($conn, $sql);
 
+                header('location: secondPallet.php');
+
                 mysqli_close($conn);
                 die();
 
@@ -84,13 +86,20 @@ session_start();
 
 
 
-
+          
+           
             <div id="ref2">
 
-                <input type="text" placeholder="reference client 2" disabled id="ref2">
-                <input type="datetime-local" id="date2"  disabled>
+                <input type="text" placeholder="reference client 2" disabled id="ref2" name="reference_interne">
+                <input type="datetime-local" id="date2"  disabled name="date2">
                 
-                <button type="submit"> enter </button>
+            <a href="secondPallet.php">    <button type="submit"> enter </button></a>
+
+            
+          
+
+
+            
 
             </div>
 

@@ -43,7 +43,7 @@ body{
 
 #container{
 
-    width: 700px;
+    width: 800px;
     height: 320px;
     background: #086E7D;
     border-radius: 15px;
@@ -78,7 +78,7 @@ body{
     border-radius: 15px;
     position: absolute;
     top: 240px;
-    left: 104px
+    left: 104px;
 
 }
 
@@ -114,4 +114,8 @@ body{
     position: absolute;
     top: 100px;
     left: 0px;
+}
+
+#ref2{
+    width: 190px;
 }

@@ -47,7 +47,7 @@ session_start();
                 </script>
                
 
-                <button type="submit" name="submit"> enter </button>
+                <button  name="submit"> enter </button>
 
             </div>
 
@@ -65,8 +65,10 @@ session_start();
                 $quantity = $_POST['quantity'];
                 $date = $_POST['date'];
                                         
-
-                                        
+                $_SESSION["ReferenceClient"] = $ReferenceClient;
+                $_SESSION["ref_int"] = $ref_int;
+                $_SESSION["quantity"] = $quantity;
+                $_SESSION["date"] = $date;                      
 
                 //data info >> database >> opérateur
                 $sql = "INSERT INTO pallets (`ReferenceClient`,`ref_int`,`quantity`,`date`) VALUES ('$ReferenceClient','$ref_int','$quantity','$date')";
@@ -75,16 +77,17 @@ session_start();
                 mysqli_close($conn);
                 die();
 
+                
             
-                             }
-                        ?>
+                }
+                ?>
 
 
 
 
             <div id="ref2">
 
-                <input type="text" placeholder="reference client 2" disabled>
+                <input type="text" placeholder="reference client 2" disabled id="ref2">
                 <input type="datetime-local" id="date2"  disabled>
                 
                 <button type="submit"> enter </button>

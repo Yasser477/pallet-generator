@@ -21,7 +21,7 @@ session_start();
 
         <h1 id="title" >ORHAN AUTOMOTIVE</h1>
 
-        
+        <h1 id="fill"> Fill the form </h1>
     </header>
     <img src="assets/bk.png" bk="bk">
 
@@ -30,13 +30,20 @@ session_start();
 
         <form  method="POST">
 
-
+            
+          
         
-     
+        
             <div id="ref1" >
 
                 <input type="text" id="inp1"  placeholder="Reference client" name="ReferenceClient">
+
+                
+
                 <input type="text" id="inp2" placeholder="Reference interne 1" name="ref_int">
+
+
+             
                 <input type="text" id="inp3" placeholder="Quantity" name="quantity">
                 <input type="datetime-local" id="inp4" name="date" >
                
@@ -64,7 +71,11 @@ session_start();
                 $ref_int   = $_POST['ref_int'];
                 $quantity = $_POST['quantity'];
                 $date = $_POST['date'];
-                                        
+
+                
+                
+                
+                
                 $_SESSION["ReferenceClient"] = $ReferenceClient;
                 $_SESSION["ref_int"] = $ref_int;
                 $_SESSION["quantity"] = $quantity;
@@ -74,6 +85,9 @@ session_start();
                 $sql = "INSERT INTO pallets (`ReferenceClient`,`ref_int`,`quantity`,`date`) VALUES ('$ReferenceClient','$ref_int','$quantity','$date')";
                 $query = mysqli_query($conn, $sql);
 
+
+              
+                
                 header('location: secondPallet.php');
 
                 mysqli_close($conn);
@@ -93,7 +107,7 @@ session_start();
                 <input type="text" placeholder="reference client 2" disabled id="ref2" name="reference_interne">
                 <input type="datetime-local" id="date2"  disabled name="date2">
                 
-            <a href="secondPallet.php">    <button type="submit" disabled> enter </button></a>
+             <button type="submit" id="btn2" disabled> enter </button>
 
             
           

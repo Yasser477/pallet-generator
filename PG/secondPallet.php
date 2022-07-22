@@ -24,7 +24,7 @@ session_start()
         <?php
           if ($_SESSION["nom"]){
           ?>
-           <a href="#"><span name="logout" class="fspans" style="position: absolute;  top:10px; font-family:'oswald' ; text-transform: uppercase; color :black; width : 190px; display: inline;"> user : <?php echo  $_SESSION["nom"];?> </span></a>  
+           <a href="#"> <button name="logout"> <span  class="fspans" style="position: absolute;  top:10px; font-family:'oswald' ; text-transform: uppercase; color :black; width : 190px; display: inline;"> user : <?php echo  $_SESSION["nom"];?> </span></button></a>  
             <?php
           }      
             ?>
@@ -33,7 +33,7 @@ session_start()
          if(isset($_POST['logout'])) {
             session_destroy();
           
-            header('location:authentication.php');
+        header('location:authentication.php');    
         }
         
         

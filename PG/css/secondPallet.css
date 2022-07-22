@@ -140,3 +140,15 @@
     font-family: 'oswald';
     text-align: center;
 }
+
+#scaned{
+    width: 150px;
+    height: 40px;
+    background-color: white;
+    font-family: 'oswald';
+    position: absolute;
+    top: 250px;
+    left: 40%;
+    border-radius: 15px;
+
+}

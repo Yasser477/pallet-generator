@@ -54,22 +54,20 @@
         }
 ?>
 
+
     <form method="post">
 
 
  <div id="container">
 
         <img src="assets/blueP.png" id="bluep">
-            <input type="text" placeholder="enter your name" id="inp1" name="nom">
-            <input type="text" placeholder="enter your password" id="inp2" name="motDePass">
+            <input type="text" placeholder="enter your name" id="inp1" name="nom"> <p></p>
+            <input type="password" placeholder="enter your password" id="inp2" name="motDePass"> <p></p>
           
     <button type="submit" id="btn" name="submit" > submit </button>  
     </div>
-
-
-
     </form>
    
-
+<script src="javascript/authentication.js"></script>
 </body>
 </html>

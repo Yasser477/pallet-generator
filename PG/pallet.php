@@ -93,7 +93,7 @@ session_start();
                 <input type="text" placeholder="reference client 2" disabled id="ref2" name="reference_interne">
                 <input type="datetime-local" id="date2"  disabled name="date2">
                 
-            <a href="secondPallet.php">    <button type="submit"> enter </button></a>
+            <a href="secondPallet.php">    <button type="submit" disabled> enter </button></a>
 
             
           

@@ -16,31 +16,49 @@ session_start()
     <img src="assets/bk.png" id="bk">
 
     <header>
+        <form methode="POST">
         <img src="assets/R.png" id="logo">
         <h1 id="title">ORHAN AUTOMOTIVE</h1>
 
-        <h4 id="nom"> user : 
+        <h4 id="nom">  
         <?php
           if ($_SESSION["nom"]){
           ?>
-           <a href="#"><span name="logout" class="fspans" style="position: absolute; left:1200px; top:38px; font-family:'oswald' ; text-transform: uppercase; color :black"> user : <?php echo  $_SESSION["nom"];?> </span></a>  
+           <a href="#"><span name="logout" class="fspans" style="position: absolute;  top:10px; font-family:'oswald' ; text-transform: uppercase; color :black; width : 190px; display: inline;"> user : <?php echo  $_SESSION["nom"];?> </span></a>  
             <?php
-          }          
-            ?> </h4>
+          }      
+            ?>
+        
+        <?php 
+         if(isset($_POST['logout'])) {
+            session_destroy();
+          
+            header('location:authentication.php');
+        }
+        
+        
+        ?>
+        
+        
+        
+        
+        
+        </h4>
+</form>
 
     </header>
 
     <main>
         <div id="container">
     <div>
-            
+
     
             <div id="inp1">
-                <p id="refEx" > Reference client : <?php echo  $_SESSION["ReferenceClient"];?> </p>
+                <p id="refEx" > Ref-Client : <?php echo  $_SESSION["ReferenceClient"];?> </p>
             </div>
 
             <div id="inp2">
-                <p id="refEx" > Reference interne 1 : <?php echo  $_SESSION["ref_int"];?> </p>
+                <p id="refEx" > Ref-interne 1 : <?php echo  $_SESSION["ref_int"];?> </p>
             </div>
 
             <div id="inp3">
@@ -87,7 +105,11 @@ session_start()
             </div>
             
             
+            <div id="scaned">
 
+                  <p> scanned : <h6></h6> </p>           
+
+            </div>
 
 
 
